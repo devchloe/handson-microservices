@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: orders
+
+server:
+  port: ${orders.port:8091}
+
+
+
+
+
+
+
