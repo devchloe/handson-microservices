@@ -1,0 +1,55 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.13.RELEASE'
+        springBootAdminVersion = '1.5.7'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
+    }
+}
+
+group 'spring.cloud.sample'
+version = '1.0'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: "com.gorylenko.gradle-git-properties"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Edgware.SR3'
+        mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+    }
+}
+
+dependencies {
+
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-turbine'
+
+    compile "de.codecentric:spring-boot-admin-server"
+    compile "de.codecentric:spring-boot-admin-server-ui"
+    compile "de.codecentric:spring-boot-admin-server-ui-login"
+    compile "de.codecentric:spring-boot-admin-server-ui-hystrix"
+    compile "de.codecentric:spring-boot-admin-server-ui-turbine"
+    compile "de.codecentric:spring-boot-admin-starter-client"
+
+
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.jolokia:jolokia-core:1.4.0'
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+}
+

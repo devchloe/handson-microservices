@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: boot-admin-server
+  boot:
+    admin:
+      monitor:
+        read-timeout: 30000
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,heapdump,hystrix.stream,turbine.stream
+      turbine:
+        location: boot-admin-server
+
+server:
+  port: 8889
+
+management:
+  security:
+    enabled: false
+
