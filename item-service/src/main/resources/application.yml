@@ -3,7 +3,7 @@ spring:
     name: items
 
 server:
-  port: ${items.port:8071}
+  port: ${item.port:8071}
 
 eureka:
   client:
