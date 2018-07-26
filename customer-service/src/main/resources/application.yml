@@ -3,7 +3,7 @@ spring:
     name: customers
 
 server:
-  port: ${customers.port:8081}
+  port: ${customer.port:8081}
 
 management:
   security:
