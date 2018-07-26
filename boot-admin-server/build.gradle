@@ -18,7 +18,6 @@ version = '1.0'
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
-apply plugin: "com.gorylenko.gradle-git-properties"
 
 sourceCompatibility = 1.8
 
