@@ -6,7 +6,7 @@
 - 실습 git repository 다운로드
 https://github.com/devchloe/handson-netflixoss.git
 
-- Prologue https://github.com/SDSACT/coe-guide/blob/master/Prologue.md#prologue
+- Prologue Prologue.md
 - 핸즈온 가이드 https://docs.google.com/document/d/1ANXSKh6LM0Cm0WKwj6y7EHg42JGtEE-Ea17Q966577U/edit?usp=sharing
 - Full sources
   - https://github.com/devchloe/eureka-server.git
