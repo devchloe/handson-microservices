@@ -14,7 +14,7 @@
 2. 클라우드, 컨테이너 활용에 따른 위치 관리, 로드밸런싱 이슈
 - 솔루션: Netflix Eureka, Ribbon
 3. 네트워크 문제 등 예상치 못한 에러에 대한 대응 방안
-- 솔루션: Netflix Hystrix, Spring Cloud Sleuth
+- 솔루션: Netflix Hystrix
 
 ## Netflix OSS 탄생 배경
 - 비즈니스 로직을 작성하는 것 외에 마이크로서비스 아키텍처를 위해 필요한 서비스가 많다!
